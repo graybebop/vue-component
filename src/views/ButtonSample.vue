@@ -1,19 +1,23 @@
 <template>
-  <post-card>
-    <h2>Card Title</h2>
-    <img src="https://picsum.photos/200" />
-    <button>Read more...</button>
-  </post-card>
-
-  <post-card>
-    <img src="https://picsum.photos/200" />
-  </post-card>
+	<div>
+		<mr-button type="submit" :label="'Test Button'" :onClick="handleClick"></mr-button>
+		<mr-button type="button" :onClick="handleClick"></mr-button>
+		<mr-button label="버튼" buttonClass="btn btn-primary btn-lg">
+			<template #prepend>
+				<span class="material-symbols-outlined"> search </span>
+			</template>
+			Click me!
+			<!-- <template #append>
+				<span class="material-symbols-outlined"> search </span>
+			</template> -->
+		</mr-button>
+	</div>
 </template>
 
-<script>
-import PostCard from "./PostCard.vue";
+<script setup>
+import MrButton from "@/components/MrButton.vue";
 
-export default {
-  components: { PostCard },
+const handleClick = () => {
+	console.log("버튼을 클릭했습니다!");
 };
 </script>

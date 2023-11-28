@@ -1,0 +1,52 @@
+html,
+body {
+  font-size: 1rem;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+button {
+
+  outline: none;
+  border: 0;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  padding: 10px 25px;
+  font-weight: 500;
+  margin: 10px;
+  border-radius: 5px;
+
+  .material-symbols-outlined {
+    font-size: 21px;
+  }
+}
+
+.btn {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: 3px;
+  position: relative;
+  overflow: hidden;
+
+  // &:hover {
+  //   &:after {
+  //     content: "";
+  //     position: absolute;
+  //     top: 0;
+  //     left: 0;
+  //     width: 100%;
+  //     height: 100%;
+  //     background-color: rgba(0, 0, 0, 0.1);
+  //   }
+  // }
+
+  span {
+    display: inline-block;
+
+    &.btn-label-txt {
+      font-size: 1.25rem;
+      font-weight: 300;
+    }
+  }
+}
