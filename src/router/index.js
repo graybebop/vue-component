@@ -22,6 +22,16 @@ const routes = [
     name: "button",
     component: () => import(/* webpackChunkName: "SwiperPage" */ "@/views/ButtonSample.vue"),
   },
+  {
+    path: "/card",
+    name: "card",
+    component: () => import(/* webpackChunkName: "SamplePage" */ "@/views/SamplePage.vue"),
+  },
+  {
+    path: "/list",
+    name: "list",
+    component: () => import(/* webpackChunkName: "SamplePage" */ "@/views/ListItem.vue"),
+  },
 ];
 
 const router = createRouter({
