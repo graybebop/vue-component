@@ -32,6 +32,11 @@ const routes = [
     name: "list",
     component: () => import(/* webpackChunkName: "SamplePage" */ "@/views/ListItem.vue"),
   },
+  {
+    path: "/view",
+    name: "view",
+    component: () => import(/* webpackChunkName: "SamplePage" */ "@/views/ViewSample.vue"),
+  },
 ];
 
 const router = createRouter({
