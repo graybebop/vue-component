@@ -37,6 +37,11 @@ const routes = [
     name: "view",
     component: () => import(/* webpackChunkName: "SamplePage" */ "@/views/ViewSample.vue"),
   },
+  {
+    path: "/tabs",
+    name: "tabs",
+    component: () => import(/* webpackChunkName: "SamplePage" */ "@/views/TabMenu.vue"),
+  },
 ];
 
 const router = createRouter({
