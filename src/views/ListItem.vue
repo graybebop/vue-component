@@ -1,18 +1,34 @@
 <template>
-  <div class="mr-list-box">
-    <div class="mr-list-item">
-      <p>왼쪽 텍스트</p>
+  <ul class="list-group">
+    <li class="list-group-item">An item</li>
+    <li class="list-group-item">A second item</li>
+    <li class="list-group-item">A third item</li>
+    <li class="list-group-item">A fourth item</li>
+    <li class="list-group-item">And a fifth one</li>
+  </ul>
+  <ul class="list-group list-group-numbered">
+    <li class="list-group-item">An item</li>
+    <li class="list-group-item">A second item</li>
+    <li class="list-group-item">A third item</li>
+    <li class="list-group-item">A fourth item</li>
+    <li class="list-group-item">And a fifth one</li>
+  </ul>
+  <div style="display: none">
+    <div class="mr-list-box">
+      <div class="mr-list-item">
+        <p>왼쪽 텍스트</p>
+      </div>
+      <div class="mr-list-item">
+        <p>오른쪽 텍스트</p>
+      </div>
     </div>
-    <div class="mr-list-item">
-      <p>오른쪽 텍스트</p>
-    </div>
-  </div>
 
-  <dl class="mr-data-list">
-    <dt class="mr-data-term">왼쪽 텍스트</dt>
-    <dd class="mr-data-def">오른쪽 숫자</dd>
-    <!-- 위 두 줄이 반복됩니다 -->
-  </dl>
+    <dl class="mr-data-list">
+      <dt class="mr-data-term">왼쪽 텍스트</dt>
+      <dd class="mr-data-def">오른쪽 숫자</dd>
+      <!-- 위 두 줄이 반복됩니다 -->
+    </dl>
+  </div>
 </template>
 
 <style lang="scss">
