@@ -22,8 +22,8 @@ const routes = [
     name: "swiper",
     component: () => import(/* webpackChunkName: "SwiperPage" */ "@/views/SwiperPage.vue"),
     meta: {
-      title: "홈 페이지",
-      description: "홈 페이지에 대한 설명입니다.",
+      title: "스와이퍼",
+      description: "스와이퍼",
       prev: true,
     },
   },
@@ -42,8 +42,8 @@ const routes = [
     name: "card",
     component: () => import(/* webpackChunkName: "SamplePage" */ "@/views/SamplePage.vue"),
     meta: {
-      title: "홈 페이지",
-      description: "홈 페이지에 대한 설명입니다.",
+      title: "카드",
+      description: "카드",
       prev: true,
     },
   },
@@ -52,8 +52,8 @@ const routes = [
     name: "list",
     component: () => import(/* webpackChunkName: "SamplePage" */ "@/views/ListItem.vue"),
     meta: {
-      title: "홈 페이지",
-      description: "홈 페이지에 대한 설명입니다.",
+      title: "클래스명 정의",
+      description: "클래스명 정의",
       prev: true,
     },
   },
@@ -62,8 +62,8 @@ const routes = [
     name: "view",
     component: () => import(/* webpackChunkName: "SamplePage" */ "@/views/ViewSample.vue"),
     meta: {
-      title: "홈 페이지",
-      description: "홈 페이지에 대한 설명입니다.",
+      title: "sticky 테스트",
+      description: "sticky 테스트",
       prev: true,
     },
   },
@@ -72,8 +72,8 @@ const routes = [
     name: "tabs",
     component: () => import(/* webpackChunkName: "SamplePage" */ "@/views/TabMenu.vue"),
     meta: {
-      title: "홈 페이지",
-      description: "홈 페이지에 대한 설명입니다.",
+      title: "탭메뉴",
+      description: "탭메누 스크롤시 활성화",
       prev: true,
     },
   },
@@ -84,6 +84,36 @@ const routes = [
     meta: {
       title: "콤포넌트 리스트",
       description: "콤포넌트 리스트",
+      prev: false,
+    },
+  },
+  {
+    path: "/svg",
+    name: "svg",
+    component: () => import(/* webpackChunkName: "SamplePage" */ "@/views/SvgSample.vue"),
+    meta: {
+      title: "svg",
+      description: "svg",
+      prev: false,
+    },
+  },
+  {
+    path: "/flex",
+    name: "flex",
+    component: () => import(/* webpackChunkName: "SamplePage" */ "@/views/FlexSample.vue"),
+    meta: {
+      title: "flex",
+      description: "flex",
+      prev: false,
+    },
+  },
+  {
+    path: "/dropdown",
+    name: "dropdown",
+    component: () => import(/* webpackChunkName: "SamplePage" */ "@/views/DropDown.vue"),
+    meta: {
+      title: "드롭다운",
+      description: "드롭다운",
       prev: false,
     },
   },
