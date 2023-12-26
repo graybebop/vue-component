@@ -94,7 +94,7 @@ const routes = [
     meta: {
       title: "svg",
       description: "svg",
-      prev: false,
+      prev: true,
     },
   },
   {
@@ -104,7 +104,7 @@ const routes = [
     meta: {
       title: "flex",
       description: "flex",
-      prev: false,
+      prev: true,
     },
   },
   {
@@ -114,7 +114,17 @@ const routes = [
     meta: {
       title: "드롭다운",
       description: "드롭다운",
-      prev: false,
+      prev: true,
+    },
+  },
+  {
+    path: "/modal",
+    name: "modal",
+    component: () => import(/* webpackChunkName: "SamplePage" */ "@/views/ModalSample.vue"),
+    meta: {
+      title: "모달",
+      description: "모달",
+      prev: true,
     },
   },
 ];
