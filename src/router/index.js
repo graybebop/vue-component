@@ -127,6 +127,16 @@ const routes = [
       prev: true,
     },
   },
+  {
+    path: "/plan",
+    name: "plan",
+    component: () => import(/* webpackChunkName: "SamplePage" */ "@/views/EstimatePage.vue"),
+    meta: {
+      title: "",
+      description: "",
+      prev: true,
+    },
+  },
 ];
 
 const router = createRouter({
