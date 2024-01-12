@@ -132,8 +132,38 @@ const routes = [
     name: "plan",
     component: () => import(/* webpackChunkName: "SamplePage" */ "@/views/EstimatePage.vue"),
     meta: {
-      title: "",
-      description: "",
+      title: "일정표",
+      description: "일정표",
+      prev: true,
+    },
+  },
+  {
+    path: "/toggle",
+    name: "toggle",
+    component: () => import(/* webpackChunkName: "SamplePage" */ "@/views/ToggleSample.vue"),
+    meta: {
+      title: "토글테스트",
+      description: "토글이 여러개 있는경우 하나로 관리",
+      prev: true,
+    },
+  },
+  {
+    path: "/top",
+    name: "top",
+    component: () => import(/* webpackChunkName: "SamplePage" */ "@/views/TopButton.vue"),
+    meta: {
+      title: "TOP 버튼",
+      description: "TOP 버튼",
+      prev: false,
+    },
+  },
+  {
+    path: "/slideDown",
+    name: "slideDown",
+    component: () => import(/* webpackChunkName: "SamplePage" */ "@/views/ToggleSlideDownUp"),
+    meta: {
+      title: "슬라이드 업 다운",
+      description: "슬라이드 업 다운",
       prev: true,
     },
   },
