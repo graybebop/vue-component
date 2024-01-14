@@ -167,6 +167,16 @@ const routes = [
       prev: true,
     },
   },
+  {
+    path: "/fade",
+    name: "fade",
+    component: () => import(/* webpackChunkName: "SamplePage" */ "@/views/ToggleFade"),
+    meta: {
+      title: "페이드",
+      description: "페이드",
+      prev: true,
+    },
+  },
 ];
 
 const router = createRouter({
