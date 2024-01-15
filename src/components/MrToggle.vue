@@ -13,7 +13,7 @@ import { onMounted, ref, defineProps } from "vue";
 
 const props = defineProps({
   button: String,
-  content: String,
+
   transname: String,
 });
 
@@ -39,7 +39,7 @@ const onAfterEnter = (el) => {
 };
 
 onMounted(() => {
-  console.log(props);
+  console.log(props.button, props.transname);
 });
 </script>
 
@@ -56,17 +56,42 @@ onMounted(() => {
 }
 //구간 마지막
 .fade-enter-to {
-  max-height: calc(100vh - 1px);
   opacity: 1;
 }
 //reverse 되는 구간
 //구간 마지막의 첨 부터
 .fade-leave-from {
-  max-height: calc(100vh - 1px);
   opacity: 1;
 }
 //구간 마지막의 마지막까지
 .fade-leave-to {
+  opacity: 0;
+}
+
+//슬라이드
+.expand-enter-active,
+.expand-leave-active {
+  transition: all 0.5s ease-out;
+}
+
+//구간 처음부터
+.expand-enter-from {
+  max-height: 0;
+  opacity: 0;
+}
+//구간 마지막
+.expand-enter-to {
+  max-height: calc(100vh - 1px);
+  opacity: 1;
+}
+//reverse 되는 구간
+//구간 마지막의 첨 부터
+.expand-leave-from {
+  max-height: calc(100vh - 1px);
+  opacity: 1;
+}
+//구간 마지막의 마지막까지
+.expand-leave-to {
   max-height: 0;
   opacity: 0;
 }
