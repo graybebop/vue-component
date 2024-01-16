@@ -40,9 +40,9 @@ const routes = [
   {
     path: "/card",
     name: "card",
-    component: () => import(/* webpackChunkName: "SamplePage" */ "@/views/SamplePage.vue"),
+    component: () => import(/* webpackChunkName: "SamplePage" */ "@/views/CardSample.vue"),
     meta: {
-      title: "카드",
+      title: "카드샘플(카드 유형별 타입, 변수 정의)",
       description: "카드",
       prev: true,
     },

@@ -111,7 +111,7 @@ export default {
     },
 
     getMeta(metas) {
-      console.log(metas);
+      //console.log(metas);
 
       return metas;
     },
@@ -120,10 +120,10 @@ export default {
   mounted() {
     this.projects = this.$router.getRoutes();
 
-    console.log(this.projects);
+    //console.log(this.projects);
 
     for (const temp of this.projects) {
-      console.log(temp);
+      //console.log(temp);
 
       // temp.meta.forEach((target) => {
       //   console.log(target);
