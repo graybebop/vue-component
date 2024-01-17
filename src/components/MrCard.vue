@@ -1,39 +1,41 @@
 <template>
-  <div :class="`card ${cardClass ? cardClass : ''}`" v-if="cardType === 'album'">
-    <!-- 이미지가 있다면 -->
-    <img :src="`${cardImage !== null ? cardImage : defaultImage}`" @error="onImageError" class="card-img-top" alt="Card image" v-if="bgImage == null" />
-    <!-- bg 이미지가 있는경우 -->
-    <div :style="bgStyle" v-else></div>
+  <template v-if="cardType === 'album'">
+    <div :class="`card ${cardClass ? cardClass : ''}`">
+      <!-- 이미지가 있다면 -->
+      <img :src="`${cardImage !== null ? cardImage : defaultImage}`" @error="onImageError" class="card-img-top" alt="Card image" v-if="bgImage == null" />
+      <!-- bg 이미지가 있는경우 -->
+      <div :style="bgStyle" v-else></div>
 
-    <div class="card-body">
-      <h5 class="card-title">
-        <slot name="title"></slot>
-      </h5>
-      <p class="card-text">
-        <slot name="sub-title"></slot>
-      </p>
-      <a :href="cardLink" class="btn btn-primary">Go somewhere</a>
-    </div>
-  </div>
-
-  <div class="card mb-3" v-else-if="cardType === 'list'" :style="{ height: bgHeight }">
-    <div class="row g-0">
-      <div class="col-md-4">
-        <img :src="`${cardImage !== null ? cardImage : defaultImage}`" @error="onImageError" class="card-img-top" alt="Card image" v-if="bgImage == null" />
-        <!-- bg 이미지가 있는경우 -->
-        <div :style="bgStyle" v-else></div>
+      <div class="card-body">
+        <h5 class="card-title">
+          <slot name="title"></slot>
+        </h5>
+        <p class="card-text">
+          <slot name="sub-title"></slot>
+        </p>
+        <a :href="cardLink" class="btn btn-primary">Go somewhere</a>
       </div>
-      <div class="col-md-8">
-        <div class="card-body">
-          <h5 class="card-title"><slot name="title"></slot></h5>
-
-          <p class="card-text">
-            <slot name="sub-title"></slot>
-          </p>
+    </div>
+  </template>
+  <template v-else-if="cardType === 'list'">
+    <div :class="`card ${cardClass ? cardClass : ''}`" :style="{ height: bgHeight }">
+      <div class="row g-0">
+        <div class="col-md-4">
+          <img :src="`${cardImage !== null ? cardImage : defaultImage}`" @error="onImageError" class="card-img-top" alt="Card image" v-if="bgImage == null" />
+          <!-- bg 이미지가 있는경우 -->
+          <div :style="bgStyle" v-else></div>
         </div>
-      </div>
-    </div>
-  </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title"><slot name="title"></slot></h5>
+
+            <p class="card-text">
+              <slot name="sub-title"></slot>
+            </p>
+          </div>
+        </div>
+      </div></div
+  ></template>
 </template>
 
 <script>

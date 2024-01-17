@@ -35,6 +35,13 @@
           <template #sub-title>cardType="list" 카드타입 리스트</template>
         </MrCard>
       </div>
+
+      <div class="col-12">
+        <MrCard :cardLink="'#none'" cardType="list">
+          <template #title>cardType</template>
+          <template #sub-title>cardType="list" 카드타입 리스트</template>
+        </MrCard>
+      </div>
     </div>
   </div>
 </template>
