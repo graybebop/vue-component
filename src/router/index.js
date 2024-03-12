@@ -177,6 +177,37 @@ const routes = [
       prev: true,
     },
   },
+  {
+    path: "/flex",
+    name: "flex",
+    component: () => import(/* webpackChunkName: "SamplePage" */ "@/views/FlexExample"),
+    meta: {
+      title: "플렉스",
+      description: "플렉스",
+      prev: true,
+    },
+  },
+  {
+    path: "/layout",
+    name: "layout",
+    component: () => import(/* webpackChunkName: "SamplePage" */ "@/views/LayoutPage"),
+    meta: {
+      title: "",
+      description: "",
+      prev: false,
+    },
+  },
+
+  {
+    path: "/sticky",
+    name: "sticky",
+    component: () => import(/* webpackChunkName: "SamplePage" */ "@/views/StickyMenu"),
+    meta: {
+      title: "",
+      description: "",
+      prev: false,
+    },
+  },
 ];
 
 const router = createRouter({
