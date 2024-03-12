@@ -11,7 +11,8 @@
 </template>
 
 <script setup>
-import { ref } from "vue";
+import { ref, onBeforeUnmount } from "vue";
+
 const menus = [
   { id: "content-1", name: "메뉴1" },
   { id: "content-2", name: "메뉴2" },
@@ -40,6 +41,9 @@ const scrollToMenu = (id) => {
   const element = document.getElementById(id);
   window.scrollTo({ top: element.offsetTop - 80, behavior: "smooth" });
 };
+onBeforeUnmount(() => {
+  window.removeEventListener("scroll", onScroll);
+});
 </script>
 
 <style lang="scss">
