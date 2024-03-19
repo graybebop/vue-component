@@ -44,64 +44,6 @@
 export default {
   data() {
     return {
-      // projects: [
-      //   {
-      //     title: "인풋박스",
-      //     type: "인풋",
-      //     workday: "",
-      //     remark: "",
-      //     link: "form",
-      //   },
-      //   {
-      //     title: "버튼",
-      //     type: "버튼",
-      //     workday: "",
-      //     remark: "",
-      //     link: "button",
-      //   },
-      //   {
-      //     title: "카드",
-      //     type: "카드",
-      //     workday: "",
-      //     remark: "",
-      //     link: "card",
-      //   },
-      //   {
-      //     title: "뷰",
-      //     type: "부",
-      //     workday: "",
-      //     remark: "",
-      //     link: "view",
-      //   },
-      //   {
-      //     title: "탭",
-      //     type: "탭",
-      //     workday: "",
-      //     remark: "",
-      //     link: "tabs",
-      //   },
-      //   {
-      //     title: "스와이퍼",
-      //     type: "스와이퍼",
-      //     workday: "",
-      //     remark: "",
-      //     link: "swiper",
-      //   },
-      //   {
-      //     title: "리스트",
-      //     type: "리스트",
-      //     workday: "",
-      //     remark: "",
-      //     link: "list",
-      //   },
-      //   {
-      //     title: "플렉스",
-      //     type: "리스트",
-      //     workday: "",
-      //     remark: "",
-      //     link: "flex",
-      //   },
-      // ],
       projects: [],
     };
   },
@@ -111,8 +53,6 @@ export default {
     },
 
     getMeta(metas) {
-      //console.log(metas);
-
       return metas;
     },
   },

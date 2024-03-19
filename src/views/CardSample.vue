@@ -30,7 +30,12 @@
       </div>
 
       <div class="col-12">
-        <MrCard :bgImage="'https://res.klook.com/image/upload/c_fill,w_750,h_560/q_80/w_80,x_15,y_15,g_south_west,l_Klook_water_br_trans_yhcmh3/activities/5628c7d5-Hoi-An-Half-Day-Private-Tour.jpg'" :bgHeight="'500px'" :cardLink="'#none'" cardType="list">
+        <MrCard
+          :bgImage="'https://res.klook.com/image/upload/c_fill,w_750,h_560/q_80/w_80,x_15,y_15,g_south_west,l_Klook_water_br_trans_yhcmh3/activities/5628c7d5-Hoi-An-Half-Day-Private-Tour.jpg'"
+          :bgHeight="'500px'"
+          :cardLink="'#none'"
+          cardType="list"
+        >
           <template #title>cardType</template>
           <template #sub-title>cardType="list" 카드타입 리스트</template>
         </MrCard>

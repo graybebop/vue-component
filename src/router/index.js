@@ -8,8 +8,8 @@ const routes = [
     component: HomeView,
   },
   {
-    path: "/form",
-    name: "form",
+    path: "/FormSample",
+    name: "FormSample",
     component: () => import(/* webpackChunkName: "FormSample" */ "@/views/FormSample.vue"),
     meta: {
       title: "폼",
@@ -18,8 +18,8 @@ const routes = [
     },
   },
   {
-    path: "/swiper",
-    name: "swiper",
+    path: "/SwiperPage",
+    name: "SwiperPage",
     component: () => import(/* webpackChunkName: "SwiperPage" */ "@/views/SwiperPage.vue"),
     meta: {
       title: "스와이퍼",
@@ -28,8 +28,8 @@ const routes = [
     },
   },
   {
-    path: "/button",
-    name: "button",
+    path: "/ButtonSample",
+    name: "ButtonSample",
     component: () => import(/* webpackChunkName: "SwiperPage" */ "@/views/ButtonSample.vue"),
     meta: {
       title: "버튼",
@@ -38,8 +38,8 @@ const routes = [
     },
   },
   {
-    path: "/card",
-    name: "card",
+    path: "/CardSample",
+    name: "CardSample",
     component: () => import(/* webpackChunkName: "SamplePage" */ "@/views/CardSample.vue"),
     meta: {
       title: "카드샘플(카드 유형별 타입, 변수 정의)",
@@ -48,8 +48,8 @@ const routes = [
     },
   },
   {
-    path: "/list",
-    name: "list",
+    path: "/ListItem",
+    name: "ListItem",
     component: () => import(/* webpackChunkName: "SamplePage" */ "@/views/ListItem.vue"),
     meta: {
       title: "클래스명 정의",
@@ -58,8 +58,8 @@ const routes = [
     },
   },
   {
-    path: "/view",
-    name: "view",
+    path: "/ViewSample",
+    name: "ViewSample",
     component: () => import(/* webpackChunkName: "SamplePage" */ "@/views/ViewSample.vue"),
     meta: {
       title: "sticky 테스트",
@@ -68,8 +68,8 @@ const routes = [
     },
   },
   {
-    path: "/tabs",
-    name: "tabs",
+    path: "/TabMenu",
+    name: "TabMenu",
     component: () => import(/* webpackChunkName: "SamplePage" */ "@/views/TabMenu.vue"),
     meta: {
       title: "탭메뉴",
@@ -88,8 +88,8 @@ const routes = [
     },
   },
   {
-    path: "/svg",
-    name: "svg",
+    path: "/SvgSample",
+    name: "SvgSample",
     component: () => import(/* webpackChunkName: "SamplePage" */ "@/views/SvgSample.vue"),
     meta: {
       title: "svg",
@@ -98,8 +98,8 @@ const routes = [
     },
   },
   {
-    path: "/flex",
-    name: "flex",
+    path: "/FlexSample",
+    name: "FlexSample",
     component: () => import(/* webpackChunkName: "SamplePage" */ "@/views/FlexSample.vue"),
     meta: {
       title: "flex",
@@ -108,8 +108,8 @@ const routes = [
     },
   },
   {
-    path: "/dropdown",
-    name: "dropdown",
+    path: "/DropDown",
+    name: "DropDown",
     component: () => import(/* webpackChunkName: "SamplePage" */ "@/views/DropDown.vue"),
     meta: {
       title: "드롭다운",
@@ -118,8 +118,8 @@ const routes = [
     },
   },
   {
-    path: "/modal",
-    name: "modal",
+    path: "/ModalSample",
+    name: "ModalSample",
     component: () => import(/* webpackChunkName: "SamplePage" */ "@/views/ModalSample.vue"),
     meta: {
       title: "모달",
@@ -128,8 +128,8 @@ const routes = [
     },
   },
   {
-    path: "/plan",
-    name: "plan",
+    path: "/EstimatePage",
+    name: "EstimatePage",
     component: () => import(/* webpackChunkName: "SamplePage" */ "@/views/EstimatePage.vue"),
     meta: {
       title: "일정표",
@@ -138,8 +138,8 @@ const routes = [
     },
   },
   {
-    path: "/toggle",
-    name: "toggle",
+    path: "/ToggleSample",
+    name: "ToggleSample",
     component: () => import(/* webpackChunkName: "SamplePage" */ "@/views/ToggleSample.vue"),
     meta: {
       title: "토글테스트",
@@ -148,8 +148,8 @@ const routes = [
     },
   },
   {
-    path: "/top",
-    name: "top",
+    path: "/TopButton",
+    name: "TopButton",
     component: () => import(/* webpackChunkName: "SamplePage" */ "@/views/TopButton.vue"),
     meta: {
       title: "TOP 버튼",
@@ -158,8 +158,8 @@ const routes = [
     },
   },
   {
-    path: "/slideDown",
-    name: "slideDown",
+    path: "/ToggleSlideDownUp",
+    name: "ToggleSlideDownUp",
     component: () => import(/* webpackChunkName: "SamplePage" */ "@/views/ToggleSlideDownUp"),
     meta: {
       title: "슬라이드 업 다운",
@@ -168,8 +168,8 @@ const routes = [
     },
   },
   {
-    path: "/fade",
-    name: "fade",
+    path: "/ToggleFade",
+    name: "ToggleFade",
     component: () => import(/* webpackChunkName: "SamplePage" */ "@/views/ToggleFade"),
     meta: {
       title: "페이드",
@@ -178,8 +178,8 @@ const routes = [
     },
   },
   {
-    path: "/flex",
-    name: "flex",
+    path: "/FlexExample",
+    name: "FlexExample",
     component: () => import(/* webpackChunkName: "SamplePage" */ "@/views/FlexExample"),
     meta: {
       title: "플렉스",
@@ -188,8 +188,8 @@ const routes = [
     },
   },
   {
-    path: "/layout",
-    name: "layout",
+    path: "/LayoutPage",
+    name: "LayoutPage",
     component: () => import(/* webpackChunkName: "SamplePage" */ "@/views/LayoutPage"),
     meta: {
       title: "",
@@ -199,12 +199,32 @@ const routes = [
   },
 
   {
-    path: "/sticky",
-    name: "sticky",
+    path: "/StickyMenu",
+    name: "StickyMenu",
     component: () => import(/* webpackChunkName: "SamplePage" */ "@/views/StickyMenu"),
     meta: {
       title: "",
       description: "",
+      prev: false,
+    },
+  },
+  {
+    path: "/LayoutConcept",
+    name: "LayoutConcept",
+    component: () => import(/* webpackChunkName: "SamplePage" */ "@/views/LayoutConcept"),
+    meta: {
+      title: "현재 레이아웃 컨셉",
+      description: "각 부분별 페이지에 쓰이는",
+      prev: false,
+    },
+  },
+  {
+    path: "/HtmlTags",
+    name: "HtmlTags",
+    component: () => import(/* webpackChunkName: "SamplePage" */ "@/views/HtmlTags"),
+    meta: {
+      title: "HTML 태그",
+      description: "HTML 태그",
       prev: false,
     },
   },

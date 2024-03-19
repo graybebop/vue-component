@@ -1,17 +1,17 @@
 <template>
   <div>
     <div class="main-swiper">
-      <swiper :options="mainSwiperOptions" ref="mainSwiper" navigation>
+      <swiper :modules="modules" @swiper="setMainSwiper" :slide-per-view="1" :thumbs="{ swiper: thumbSwiper }" ref="mainSwiper" navigation>
         <swiper-slide v-for="(slide, index) in slides" :key="index">
-          <img src="slide" alt="Main slide" />
+          <img :src="slide.origin" alt="Main slide" @error="onImageError" />
         </swiper-slide>
       </swiper>
     </div>
 
     <div class="thumbs-swiper">
-      <swiper :options="thumbSwiperOptions" @swiper="onSwiper" class="swiper" ref="thumbSwiper">
+      <swiper :modules="modules" @swiper="setThumbSwiper" :slide-per-view="1" class="swiper" ref="thumbSwiper">
         <swiper-slide v-for="(slide, index) in slides" :key="index">
-          <img :src="slide" alt="Thumb slide" />
+          <img :src="slide.thumb" alt="Thumb slide" @error="onImageError" />
         </swiper-slide>
       </swiper>
       <div class="gallery-paging-wrap">
@@ -38,31 +38,46 @@ export default {
     return {
       modules: [Navigation, Thumbs],
       slides: [
-        "https://media.istockphoto.com/id/1139328205/ko/%EC%82%AC%EC%A7%84/%EC%B6%95%EC%A0%9C-%EC%B6%94%EC%83%81%EC%A0%81%EC%9D%B8-%EB%B0%B0%EA%B2%BD%EC%97%90-%EA%B8%B0%EB%A6%84-%EB%9E%A8%ED%94%84-%EA%B5%BD%EA%B8%B0.jpg?s=2048x2048&w=is&k=20&c=IU_AQVPtDoLANkAmK6hEMQ4Qfd9bQgYPtmZ2BC5QZ_c=",
-        "https://media.istockphoto.com/id/1139328205/ko/%EC%82%AC%EC%A7%84/%EC%B6%95%EC%A0%9C-%EC%B6%94%EC%83%81%EC%A0%81%EC%9D%B8-%EB%B0%B0%EA%B2%BD%EC%97%90-%EA%B8%B0%EB%A6%84-%EB%9E%A8%ED%94%84-%EA%B5%BD%EA%B8%B0.jpg?s=2048x2048&w=is&k=20&c=IU_AQVPtDoLANkAmK6hEMQ4Qfd9bQgYPtmZ2BC5QZ_c=",
-        "https://media.istockphoto.com/id/1139328205/ko/%EC%82%AC%EC%A7%84/%EC%B6%95%EC%A0%9C-%EC%B6%94%EC%83%81%EC%A0%81%EC%9D%B8-%EB%B0%B0%EA%B2%BD%EC%97%90-%EA%B8%B0%EB%A6%84-%EB%9E%A8%ED%94%84-%EA%B5%BD%EA%B8%B0.jpg?s=2048x2048&w=is&k=20&c=IU_AQVPtDoLANkAmK6hEMQ4Qfd9bQgYPtmZ2BC5QZ_c=",
-        "https://media.istockphoto.com/id/1139328205/ko/%EC%82%AC%EC%A7%84/%EC%B6%95%EC%A0%9C-%EC%B6%94%EC%83%81%EC%A0%81%EC%9D%B8-%EB%B0%B0%EA%B2%BD%EC%97%90-%EA%B8%B0%EB%A6%84-%EB%9E%A8%ED%94%84-%EA%B5%BD%EA%B8%B0.jpg?s=2048x2048&w=is&k=20&c=IU_AQVPtDoLANkAmK6hEMQ4Qfd9bQgYPtmZ2BC5QZ_c=",
-        "https://media.istockphoto.com/id/1139328205/ko/%EC%82%AC%EC%A7%84/%EC%B6%95%EC%A0%9C-%EC%B6%94%EC%83%81%EC%A0%81%EC%9D%B8-%EB%B0%B0%EA%B2%BD%EC%97%90-%EA%B8%B0%EB%A6%84-%EB%9E%A8%ED%94%84-%EA%B5%BD%EA%B8%B0.jpg?s=2048x2048&w=is&k=20&c=IU_AQVPtDoLANkAmK6hEMQ4Qfd9bQgYPtmZ2BC5QZ_c=",
-        "https://media.istockphoto.com/id/1139328205/ko/%EC%82%AC%EC%A7%84/%EC%B6%95%EC%A0%9C-%EC%B6%94%EC%83%81%EC%A0%81%EC%9D%B8-%EB%B0%B0%EA%B2%BD%EC%97%90-%EA%B8%B0%EB%A6%84-%EB%9E%A8%ED%94%84-%EA%B5%BD%EA%B8%B0.jpg?s=2048x2048&w=is&k=20&c=IU_AQVPtDoLANkAmK6hEMQ4Qfd9bQgYPtmZ2BC5QZ_c=",
-        "https://media.istockphoto.com/id/1139328205/ko/%EC%82%AC%EC%A7%84/%EC%B6%95%EC%A0%9C-%EC%B6%94%EC%83%81%EC%A0%81%EC%9D%B8-%EB%B0%B0%EA%B2%BD%EC%97%90-%EA%B8%B0%EB%A6%84-%EB%9E%A8%ED%94%84-%EA%B5%BD%EA%B8%B0.jpg?s=2048x2048&w=is&k=20&c=IU_AQVPtDoLANkAmK6hEMQ4Qfd9bQgYPtmZ2BC5QZ_c=",
-        "https://media.istockphoto.com/id/1139328205/ko/%EC%82%AC%EC%A7%84/%EC%B6%95%EC%A0%9C-%EC%B6%94%EC%83%81%EC%A0%81%EC%9D%B8-%EB%B0%B0%EA%B2%BD%EC%97%90-%EA%B8%B0%EB%A6%84-%EB%9E%A8%ED%94%84-%EA%B5%BD%EA%B8%B0.jpg?s=2048x2048&w=is&k=20&c=IU_AQVPtDoLANkAmK6hEMQ4Qfd9bQgYPtmZ2BC5QZ_c=",
-      ],
-      mainSwiperOptions: {
-        slidesPerView: 1,
-        navigation: true,
-        thumbs: {
-          swiper: null,
+        {
+          origin: "https://img.freepik.com/free-photo/luxurious-car-parked-highway-with-illuminated-headlight-sunset_181624-60607.jpg",
+          thumb: "https://img.freepik.com/free-photo/luxurious-car-parked-highway-with-illuminated-headlight-sunset_181624-60607.jpg",
         },
-      },
-      thumbSwiperOptions: {
-        slidesPerView: 4,
-        freeMode: true,
-        watchSlidesVisibility: true,
-        watchSlidesProgress: true,
-      },
+        {
+          origin: "https://img.freepik.com/free-photo/sports-car-driving-asphalt-road-night-generative-ai_188544-8052.jpg",
+          thumb: "https://img.freepik.com/free-photo/sports-car-driving-asphalt-road-night-generative-ai_188544-8052.jpg",
+        },
+        {
+          origin: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/2019_Toyota_Corolla_Icon_Tech_VVT-i_Hybrid_1.8.jpg/1200px-2019_Toyota_Corolla_Icon_Tech_VVT-i_Hybrid_1.8.jpg",
+          thumb: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/2019_Toyota_Corolla_Icon_Tech_VVT-i_Hybrid_1.8.jpg/1200px-2019_Toyota_Corolla_Icon_Tech_VVT-i_Hybrid_1.8.jpg",
+        },
+        {
+          origin: "",
+          thumb: "",
+        },
+      ],
+      mainSwiper: null,
+      thumbSwiper: null,
+      noImage: "https://st.depositphotos.com/2934765/53192/v/450/depositphotos_531920820-stock-illustration-photo-available-vector-icon-default.jpg",
+      // mainSwiperOptions: {
+      //   slidesPerView: 1,
+      //   navigation: true,
+      //   thumbs: {
+      //     swiper: this.thumbSwiper,
+      //   },
+      //   autoHeight: true,
+      // },
+      // thumbSwiperOptions: {
+      //   slidesPerView: 4,
+      //   freeMode: true,
+      //   watchSlidesVisibility: true,
+      //   watchSlidesProgress: true,
+      // },
     };
   },
   methods: {
+    setMainSwiper(swiper) {
+      this.mainSwiper = swiper;
+    },
     goNext() {
       this.$refs.mainSwiper.swiper.slideNext();
       this.$refs.thumbSwiper.swiper.slideNext();
@@ -71,14 +86,18 @@ export default {
       this.$refs.mainSwiper.swiper.slidePrev();
       this.$refs.thumbSwiper.swiper.slidePrev();
     },
-    onSwiper(swiper) {
-      this.mainSwiperOptions.thumbs.swiper = swiper;
+    setThumbSwiper(swiper) {
+      this.thumbSwiper = swiper;
+    },
+    onImageError(e) {
+      e.target.src = this.noImage;
+      console.log("이미지 에러 :", e.target.src);
     },
   },
   mounted() {
     // Swiper 인스턴스 생성 후 네비게이션 엘리먼트 설정
-    this.$refs.mainSwiper.swiper.navigation.nextEl = ".thumb-nav-next, .swiper-button-next";
-    this.$refs.mainSwiper.swiper.navigation.prevEl = ".thumb-nav-prev, .swiper-button-prev";
+    //this.$refs.mainSwiper.swiper.navigation.nextEl = ".thumb-nav-next, .swiper-button-next";
+    // this.$refs.mainSwiper.swiper.navigation.prevEl = ".thumb-nav-prev, .swiper-button-prev";
   },
 };
 </script>
@@ -89,6 +108,21 @@ export default {
   margin: 0 auto;
   .swiper-slider {
     width: 100%;
+  }
+}
+
+.thumbs-swiper {
+  .swiper-slide {
+    width: 60px !important;
+    height: 60px;
+    position: relative;
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
   }
 }
 </style>
