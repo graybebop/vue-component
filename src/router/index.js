@@ -228,6 +228,17 @@ const routes = [
       prev: false,
     },
   },
+
+  {
+    path: "/",
+    name: "BasicLayout",
+    component: () => import(/* webpackChunkName: "SamplePage" */ "@/views/BasicLayout"),
+    meta: {
+      title: "BasicLayout",
+      description: "BasicLayout",
+      prev: false,
+    },
+  },
 ];
 
 const router = createRouter({
