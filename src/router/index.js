@@ -230,7 +230,7 @@ const routes = [
   },
 
   {
-    path: "/",
+    path: "/BasicLayout",
     name: "BasicLayout",
     component: () => import(/* webpackChunkName: "SamplePage" */ "@/views/BasicLayout"),
     meta: {
