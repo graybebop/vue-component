@@ -239,6 +239,28 @@ const routes = [
       prev: false,
     },
   },
+
+  {
+    path: "/TabsToggle",
+    name: "TabsToggle",
+    component: () => import(/* webpackChunkName: "SamplePage" */ "@/views/TabsToggle"),
+    meta: {
+      title: "TabsToggle",
+      description: "TabsToggle",
+      prev: false,
+    },
+  },
+
+  {
+    path: "/ScrollFade",
+    name: "ScrollFade",
+    component: () => import(/* webpackChunkName: "SamplePage" */ "@/views/ScrollFade"),
+    meta: {
+      title: "ScrollFade",
+      description: "ScrollFade",
+      prev: false,
+    },
+  },
 ];
 
 const router = createRouter({
